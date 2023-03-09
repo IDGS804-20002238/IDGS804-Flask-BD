@@ -1,0 +1,11 @@
+{% extends "layout.html"%}
+
+{% block content %}
+  <h1>Eliminar alumno</h1>
+  <p>¿Seguro que desea eliminar al <br>alumno: {{ alumno.nombre }} {{ alumno.apaterno }} <br> email: {{alumno.email}}?</p>
+  <form method="post">
+    <input type="hidden" name="csrf_token" value="{{csrf_token()}}">
+    <input type="submit" class="btn btn-danger" value="Eliminar">
+    <a href="ABCompleto" class="btn btn-warning" >No</a>
+  </form>
+{% endblock %}
